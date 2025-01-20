@@ -4,33 +4,40 @@ import com.back_end_TN.project_tn.enums.Active;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.LastModifiedDate;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
 @MappedSuperclass
-public class BaseEntity {
+public class BaseEntity <T> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private T id;
 
     @Enumerated(EnumType.ORDINAL)
     @Column(name = "active")
     private Active active = Active.CHUA_HOAT_DONG;  // Giá trị mặc định là 0
-    @Column(name = "created_at", updatable = false)
-    private LocalDateTime createdAt;
+    // Them mot cai ID
+    @CreatedBy // tu dong them user_id vao record
+    @Column(name = "create_by")
+    private T createBy;
 
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
+    @LastModifiedDate //
+    @Column(name = "updated_by")
+    private T updatedBy;
 
-    @PrePersist
-    protected void onCreate() {
-        createdAt = LocalDateTime.now();
-    }
+    @Column(name = "create_at")
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createAt;
 
-    @PreUpdate
-    protected void onUpdate() {
-        updatedAt = LocalDateTime.now();
-    }
+    @Column(name = "update_at")
+    @UpdateTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date updateAt;
 }

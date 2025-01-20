@@ -8,7 +8,11 @@ import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
+import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -16,9 +20,9 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserEntity  extends BaseEntity{
+public class UserEntity  extends BaseEntity<Long> implements UserDetails, Serializable {
 
-     @Column(name = "username")
+     @Column(name = "user_name")
      private String username;
      @Column(name = "password")
      @Min(value = 6, message = "Mật khẩu phải có tối thiểu 6 kí tự")
@@ -44,6 +48,35 @@ public class UserEntity  extends BaseEntity{
      @OneToMany(mappedBy = "userId", orphanRemoval = true)
      private List<UserRoleEntity> userRoles;
 
-    @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<AuthProvider> authProviders;
+     @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, orphanRemoval = true)
+     private List<AuthProvider> authProviders;
+
+     @OneToMany(mappedBy = "userId")
+     private List<Address> addresses;
+
+
+     @Override
+     public Collection<? extends GrantedAuthority> getAuthorities() {
+          return List.of();
+     }
+
+     @Override
+     public boolean isAccountNonExpired() {
+          return UserDetails.super.isAccountNonExpired();
+     }
+
+     @Override
+     public boolean isAccountNonLocked() {
+          return UserDetails.super.isAccountNonLocked();
+     }
+
+     @Override
+     public boolean isCredentialsNonExpired() {
+          return UserDetails.super.isCredentialsNonExpired();
+     }
+
+     @Override
+     public boolean isEnabled() {
+          return UserDetails.super.isEnabled();
+     }
 }
