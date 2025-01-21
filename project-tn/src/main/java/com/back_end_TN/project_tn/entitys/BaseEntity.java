@@ -6,8 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.LastModifiedDate;
 
 import java.util.Date;
 
@@ -22,14 +20,6 @@ public class BaseEntity <T> {
     @Enumerated(EnumType.ORDINAL)
     @Column(name = "active")
     private Active active = Active.CHUA_HOAT_DONG;  // Giá trị mặc định là 0
-    // Them mot cai ID
-    @CreatedBy // tu dong them user_id vao record
-    @Column(name = "create_by")
-    private T createBy;
-
-    @LastModifiedDate //
-    @Column(name = "updated_by")
-    private T updatedBy;
 
     @Column(name = "create_at")
     @CreationTimestamp

@@ -24,7 +24,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class AppConfig {
     private final UserService userService;
     private final PreFilterSecurity preFilterSecurity;
-    private String[]WHITE_LIST = {"/api/v1/**"};
+    private String [] WHITE_LIST = {"/auth/**"};
 
     // config cors giup trinh duyet xac dinh cac origin nao duoc phep truy cap
     @Bean

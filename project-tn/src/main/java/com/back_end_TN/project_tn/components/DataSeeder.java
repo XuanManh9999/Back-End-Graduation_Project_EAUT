@@ -2,23 +2,19 @@ package com.back_end_TN.project_tn.components;
 
 import com.back_end_TN.project_tn.entitys.Permission;
 import com.back_end_TN.project_tn.repositorys.PermissionRepository;
-import com.back_end_TN.project_tn.repositorys.UserEntityRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
 public class DataSeeder implements CommandLineRunner  {
 
-    private final UserEntityRepository userRepository;
     private final PermissionRepository permissionRepository;
 
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args)  {
         seederPermission();
     }
 

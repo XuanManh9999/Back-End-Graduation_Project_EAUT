@@ -1,7 +1,7 @@
 # config
 server:
-  servlet:
-    context-path: "/api/v1"
+  servlet: #/api/v1
+    context-path: ""
 spring:
   application:
     name: project-tn
@@ -15,8 +15,13 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     show-sql: true
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+jwt:
+  expiryHour: 1
+  expiryDay: 14
+  secretKey: zzkpqZ1eUo/udLOYXr+/KVcKguT5f2eulxDE/dKjxOWWjsADWEyIBWyUP8EdFZUz
+  refreshKey: nvev8yUsz4hl1wCuSCkvQO+T6NO+ecGjWSBJKRf7N0SuDArEeTPHPHBK1xPe0fAw

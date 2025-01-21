@@ -20,17 +20,16 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "user")
 public class UserEntity  extends BaseEntity<Long> implements UserDetails, Serializable {
 
      @Column(name = "user_name")
      private String username;
      @Column(name = "password")
-     @Min(value = 6, message = "Mật khẩu phải có tối thiểu 6 kí tự")
-     @Max(value = 12, message = "Mật khẩu có thể chứa tối đa 12 kí tự")
+//     @Min(value = 6, message = "Mật khẩu phải có tối thiểu 6 kí tự")
      private String password;
 
-     @Column(name = "email", unique = true, nullable = false)
-     @Email
+     @Column(name = "email", unique = true)
      private String email;
 
      private Gender gender;
@@ -39,7 +38,7 @@ public class UserEntity  extends BaseEntity<Long> implements UserDetails, Serial
      private Long point;
      @Column(name = "avatar", columnDefinition = "TEXT")
      private String avatar;
-     @Column(nullable = false, unique = true)
+     @Column(unique = true)
      @Min(value = 10)
      @Max(value = 10)
      private String phoneNumber;
@@ -67,7 +66,8 @@ public class UserEntity  extends BaseEntity<Long> implements UserDetails, Serial
 
      @Override
      public boolean isAccountNonLocked() {
-          return UserDetails.super.isAccountNonLocked();
+//          return UserDetails.super.isAccountNonLocked();
+          return true;
      }
 
      @Override
