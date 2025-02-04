@@ -50,15 +50,15 @@ public class AuthenticationImpl implements AuthenticationService {
 
 
         // check it into db
-        var user = userService.findUserByUsername(username);
-        if (!jwtService.isValid(token, REFRESH_TOKEN, user.get())) {
+        var user = userService.findUserByUsername(username).orElseThrow(() -> new InvalidDataNotFound("User not found"));
+        if (!jwtService.isValid(token, REFRESH_TOKEN, user)) {
             throw new InvalidDataNotFound("Refresh token is invalid");
         }
-        String assessToken = jwtService.generateAccessToken(user.get());
+        String assessToken = jwtService.generateAccessToken(user);
         return TokenResponse.builder()
                 .accessToken(assessToken)
                 .refreshToken(token)
-                .userId(user.get().getId())
+                .userId(user.getId())
                 .build();
     }
 }
