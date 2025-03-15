@@ -6,8 +6,6 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.*;
 
-import javax.management.relation.Role;
-
 @Getter
 @Setter
 @Builder

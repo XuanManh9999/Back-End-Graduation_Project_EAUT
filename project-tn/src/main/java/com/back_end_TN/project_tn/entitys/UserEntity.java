@@ -47,7 +47,7 @@ public class UserEntity  extends BaseEntity<Long> implements UserDetails, Serial
      @OneToMany(mappedBy = "userId", orphanRemoval = true)
      private List<UserRoleEntity> userRoles;
 
-     @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, orphanRemoval = true)
+     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
      private List<AuthProvider> authProviders;
 
      @OneToMany(mappedBy = "userId")
