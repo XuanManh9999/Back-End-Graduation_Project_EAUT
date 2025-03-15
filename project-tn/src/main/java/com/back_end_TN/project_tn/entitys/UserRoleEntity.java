@@ -1,40 +1,25 @@
 package com.back_end_TN.project_tn.entitys;
 
-import com.back_end_TN.project_tn.enums.Active;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import lombok.Data;
-
-import java.time.LocalDateTime;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Data
-@IdClass(UserRoleId.class)  // Chỉ định lớp khóa chính composite
-public class UserRoleEntity {
+@Table(name = "user_role")
+public class UserRoleEntity extends BaseEntity<Long>{
 
-    @Id
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private UserEntity userId;
 
-    @Id
     @ManyToOne
+    @JoinColumn(name = "role_id")
     private RoleEntity roleId;
-    @Enumerated(EnumType.ORDINAL)
-    @Column(name = "active")
-    private Active active = Active.CHUA_HOAT_DONG;  // Giá trị mặc định là 0
-    @Column(name = "created_at", updatable = false)
-    private LocalDateTime createdAt;
 
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
-
-    @PrePersist
-    protected void onCreate() {
-        createdAt = LocalDateTime.now();
-    }
-
-    @PreUpdate
-    protected void onUpdate() {
-        updatedAt = LocalDateTime.now();
-    }
 
 }

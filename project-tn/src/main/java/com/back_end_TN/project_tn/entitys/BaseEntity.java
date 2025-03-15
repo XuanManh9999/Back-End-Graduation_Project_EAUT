@@ -4,33 +4,30 @@ import com.back_end_TN.project_tn.enums.Active;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
 @MappedSuperclass
-public class BaseEntity {
+public class BaseEntity <T> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private T id;
 
     @Enumerated(EnumType.ORDINAL)
     @Column(name = "active")
     private Active active = Active.CHUA_HOAT_DONG;  // Giá trị mặc định là 0
-    @Column(name = "created_at", updatable = false)
-    private LocalDateTime createdAt;
 
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
+    @Column(name = "create_at")
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createAt;
 
-    @PrePersist
-    protected void onCreate() {
-        createdAt = LocalDateTime.now();
-    }
-
-    @PreUpdate
-    protected void onUpdate() {
-        updatedAt = LocalDateTime.now();
-    }
+    @Column(name = "update_at")
+    @UpdateTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date updateAt;
 }

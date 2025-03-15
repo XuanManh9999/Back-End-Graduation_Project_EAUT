@@ -7,7 +7,6 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.util.List;
 
 @RestController
@@ -16,7 +15,6 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class UserRepository {
     UserService userService;
-
     @GetMapping
     public List<String> getUsers() {
         return userService.getAllUsers();

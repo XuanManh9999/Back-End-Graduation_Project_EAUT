@@ -2,11 +2,9 @@ package com.back_end_TN.project_tn.enums;
 
 public enum Active {
     CHUA_HOAT_DONG(0),
-    VO_HIEU_HOA(-1),
-    HOAT_DONG(1)
-
+    HOAT_DONG(1),
+    VO_HIEU_HOA(2)
     ;
-
     private final int value;
 
     // Constructor
