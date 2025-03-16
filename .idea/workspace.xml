@@ -4,41 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8fa37ad-bccc-4466-ae43-a781ef08409c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/components/EmailSending.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/components/RandomStringGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/configs/FirebaseConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/request/ForgotPasswordRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/request/OauthFireBaseRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/request/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/request/VerifyOtpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/response/CommonResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/exceptions/customs/DuplicateResourceException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/back-end-TN.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/controllers/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/response/TokenResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/response/TokenResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/AuthProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/AuthProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/RoleHasPermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/RoleHasPermission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/UserRoleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/UserRoleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/enums/Active.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/enums/Active.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/exceptions/GlobalExceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/exceptions/GlobalExceptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/AuthProviderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/AuthProviderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/OtpRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/OtpRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/UserEntityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/UserEntityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/impl/AuthenticationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/impl/AuthenticationImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/resources/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/resources/application-dev.yaml" afterDir="false" />
+    <list default="true" id="4ba48fe2-18a5-4d30-a7a3-5e2f332b6578" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/configs/FirebaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/configs/FirebaseConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,37 +14,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="dev" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;XuanManh9999&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "XuanManh9999"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/XuanManh9999/Back-End-Graduation_Project_EAUT.git&quot;,
-    &quot;accountId&quot;: &quot;58798488-312e-4d3e-bfa7-2ec1201853b9&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/XuanManh9999/Back-End-Graduation_Project_EAUT.git",
+    "accountId": "58798488-312e-4d3e-bfa7-2ec1201853b9"
   }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2su4hu1AEGtMZn09CmfEwjLHYIQ" />
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2uOhd0qkAQ3mJATvfvWGm5xSODH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -91,31 +47,22 @@
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.ProjectTnApplication.executor": "Run",
     "git-widget-placeholder": "dev",
-    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/workspace/DACN/WEBSITE_HOC_TRUC_TUYEN_CODE_ZEN/Back-end",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="back-end-TN" />
+    <configuration name="ProjectTnApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="project-tn" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.back_end_TN.project_tn.ProjectTnApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="back-end-TN" />
-      <option name="filePath" />
-      <method v="2" />
     </configuration>
   </component>
   <component name="SharedIndexes">
@@ -129,29 +76,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c8fa37ad-bccc-4466-ae43-a781ef08409c" name="Changes" comment="" />
-      <created>1739292247728</created>
+      <changelist id="4ba48fe2-18a5-4d30-a7a3-5e2f332b6578" name="Changes" comment="" />
+      <created>1742125617237</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1739292247728</updated>
-      <workItem from="1739292248905" duration="60000" />
-      <workItem from="1739680897143" duration="146000" />
-      <workItem from="1739683185609" duration="9000" />
-      <workItem from="1739700679600" duration="485000" />
-      <workItem from="1739701181921" duration="28000" />
-      <workItem from="1739701261952" duration="56000" />
-      <workItem from="1739701343468" duration="26000" />
-      <workItem from="1741179856112" duration="690000" />
-      <workItem from="1741254104016" duration="2000" />
-      <workItem from="1741256847973" duration="2000" />
-      <workItem from="1741314243170" duration="3000" />
-      <workItem from="1741576887033" duration="4000" />
-      <workItem from="1741578943320" duration="5000" />
-      <workItem from="1741579676414" duration="49000" />
-      <workItem from="1741597298859" duration="3000" />
-      <workItem from="1741618997516" duration="31000" />
-      <workItem from="1742055796598" duration="8000" />
-      <workItem from="1742058532603" duration="48000" />
+      <updated>1742125617237</updated>
+      <workItem from="1742125619513" duration="3725000" />
     </task>
     <servers />
   </component>
