@@ -13,4 +13,5 @@ public class CommonResponse implements Serializable {
     private int status;
     private String message;
     private Object data;
+    private Integer totalPage;
 }

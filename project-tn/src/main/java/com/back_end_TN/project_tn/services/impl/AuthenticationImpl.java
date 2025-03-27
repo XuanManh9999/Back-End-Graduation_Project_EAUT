@@ -5,16 +5,13 @@ import com.back_end_TN.project_tn.components.RandomStringGenerator;
 import com.back_end_TN.project_tn.dtos.request.*;
 import com.back_end_TN.project_tn.dtos.response.CommonResponse;
 import com.back_end_TN.project_tn.dtos.response.TokenResponse;
-import com.back_end_TN.project_tn.entitys.AuthProvider;
-import com.back_end_TN.project_tn.entitys.OtpEntity;
-import com.back_end_TN.project_tn.entitys.UserEntity;
+import com.back_end_TN.project_tn.entitys.*;
 import com.back_end_TN.project_tn.enums.Active;
+import com.back_end_TN.project_tn.enums.Role;
 import com.back_end_TN.project_tn.exceptions.customs.DuplicateResourceException;
 import com.back_end_TN.project_tn.exceptions.customs.InvalidDataNotFound;
 import com.back_end_TN.project_tn.exceptions.customs.NotFoundException;
-import com.back_end_TN.project_tn.repositorys.AuthProviderRepository;
-import com.back_end_TN.project_tn.repositorys.OtpRepository;
-import com.back_end_TN.project_tn.repositorys.UserEntityRepository;
+import com.back_end_TN.project_tn.repositorys.*;
 import com.back_end_TN.project_tn.services.AuthenticationService;
 import com.back_end_TN.project_tn.services.JwtService;
 import com.back_end_TN.project_tn.services.UserService;
@@ -53,6 +50,8 @@ public class AuthenticationImpl implements AuthenticationService {
     private final PasswordEncoder passwordEncoder;
     private final FirebaseAuth firebaseAuth;
     private final AuthProviderRepository authProviderRepository;
+    private final RoleRepository roleRepository;
+    private final UserRoleRepository userRoleRepository;
 
 
     @Override
@@ -112,7 +111,17 @@ public class AuthenticationImpl implements AuthenticationService {
             String encodePassworrd = passwordEncoder.encode(registerRequest.getPassword());
             user.setPassword(encodePassworrd);
             user.setActive(Active.CHUA_HOAT_DONG);
+
+            Optional<RoleEntity> roleEntity = roleRepository.findRoleEntityByName(Role.CLIENT);
+
+            UserRoleEntity userRole = new UserRoleEntity();
+
+            userRole.setUserId(user);
+            userRole.setRoleId(roleEntity.get());
             userEntityRepository.save(user);
+            userRole.setActive(Active.HOAT_DONG);
+            userRoleRepository.save(userRole);
+
             String encode = randomStringGenerator.generateRandomString(6);
             OtpEntity otp = new OtpEntity();
             otp.setEmail(registerRequest.getEmail());
