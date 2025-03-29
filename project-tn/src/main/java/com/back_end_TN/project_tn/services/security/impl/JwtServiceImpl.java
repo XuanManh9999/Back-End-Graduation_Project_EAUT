@@ -1,8 +1,8 @@
-package com.back_end_TN.project_tn.services.impl;
+package com.back_end_TN.project_tn.services.security.impl;
 
 import com.back_end_TN.project_tn.enums.TokenType;
 import com.back_end_TN.project_tn.exceptions.customs.InvalidDataNotFound;
-import com.back_end_TN.project_tn.services.JwtService;
+import com.back_end_TN.project_tn.services.security.JwtService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

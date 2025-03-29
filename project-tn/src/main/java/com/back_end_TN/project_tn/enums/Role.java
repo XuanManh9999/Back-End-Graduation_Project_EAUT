@@ -1,9 +1,9 @@
 package com.back_end_TN.project_tn.enums;
 
 public enum Role {
-    ADMIN("ADMIN"),
-    CLIENT ("CLIENT"),
-    LECTURER ("LECTURER");
+    ROLE_ADMIN("ROLE_ADMIN"),
+    ROLE_USER ("ROLE_USER"),
+    ROLE_LECTURER ("ROLE_LECTURER");
     private final String roleName;
 
     Role(String roleName) {
@@ -11,7 +11,7 @@ public enum Role {
     }
 
     public String getRoleName() {
-        return roleName;
+        return this.roleName;
     }
 
     public static Role getById(String roleName) {

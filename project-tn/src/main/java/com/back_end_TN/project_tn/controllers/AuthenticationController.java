@@ -3,7 +3,7 @@ package com.back_end_TN.project_tn.controllers;
 import com.back_end_TN.project_tn.dtos.request.*;
 import com.back_end_TN.project_tn.dtos.response.CommonResponse;
 import com.back_end_TN.project_tn.dtos.response.TokenResponse;
-import com.back_end_TN.project_tn.services.AuthenticationService;
+import com.back_end_TN.project_tn.services.auth.AuthenticationService;
 import com.google.firebase.auth.FirebaseToken;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
@@ -56,7 +56,6 @@ public class AuthenticationController {
     public ResponseEntity<CommonResponse> verifyOtpForgotPassword(@RequestBody VerifyOtpRequest verifyOtpRequest) {
         return authenticationService.verifyOtpForgotPassword(verifyOtpRequest);
     }
-
 
     @PostMapping("/oauth/login")
     public ResponseEntity<?> LoginWithFireBase(@RequestBody OauthFireBaseRequest oauthFireBaseRequest) {

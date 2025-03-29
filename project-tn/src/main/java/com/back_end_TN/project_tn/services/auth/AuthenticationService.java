@@ -1,4 +1,4 @@
-package com.back_end_TN.project_tn.services;
+package com.back_end_TN.project_tn.services.auth;
 
 import com.back_end_TN.project_tn.dtos.request.*;
 import com.back_end_TN.project_tn.dtos.response.CommonResponse;
@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
 
 public interface AuthenticationService {
+
     TokenResponse authenticate(SignInRequest signInRequest);
     TokenResponse refresh(HttpServletRequest request);
     CommonResponse registerUser(RegisterRequest registerRequest);

@@ -19,6 +19,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
 @Data
@@ -48,12 +49,12 @@ public class UserEntity extends BaseEntity<Long> implements UserDetails, Seriali
      @Column(name = "avatar", columnDefinition = "TEXT")
      private String avatar;
 
-     @Column(unique = true)
+     @Column
      @Min(value = 10)
      @Max(value = 10)
      private String phoneNumber;
 
-     @OneToMany(mappedBy = "userId", orphanRemoval = true)
+     @OneToMany(mappedBy = "userId", orphanRemoval = true, fetch = FetchType.EAGER)
      private List<UserRoleEntity> userRoles;
 
      @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -64,7 +65,9 @@ public class UserEntity extends BaseEntity<Long> implements UserDetails, Seriali
 
      @Override
      public Collection<? extends GrantedAuthority> getAuthorities() {
-          return List.of();
+          return userRoles.stream()
+                  .map(userRole -> (GrantedAuthority) () -> userRole.getRoleId().getName().name())
+                  .collect(Collectors.toList());
      }
 
      @Override
