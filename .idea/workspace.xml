@@ -4,61 +4,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8fa37ad-bccc-4466-ae43-a781ef08409c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/components/EmailSending.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/components/RandomStringGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/configs/FirebaseConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/request/ForgotPasswordRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/request/OauthFireBaseRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/request/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/request/VerifyOtpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/response/CommonResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/exceptions/customs/DuplicateResourceException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/back-end-TN.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/pom.xml" afterDir="false" />
+    <list default="true" id="4ba48fe2-18a5-4d30-a7a3-5e2f332b6578" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/configs/security/SecurityBeansConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/controllers/common/CommonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/controllers/user/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/request/ChangeInfoUserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/request/ChangePasswordRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/exceptions/customs/ServerException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/common/CommonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/common/impl/CommonServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/user/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/user/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/utils/PermissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/components/DataSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/components/DataSeeder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/configs/ModelMapperConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/configs/ModelMapperConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/configs/security/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/configs/security/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/configs/security/PreFilterSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/configs/security/PreFilterSecurity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/controllers/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/response/TokenResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/response/TokenResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/AuthProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/AuthProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/RoleHasPermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/RoleHasPermission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/controllers/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/controllers/admin/ManageUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/request/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/dtos/request/UserRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/UserEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/UserRoleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/entitys/UserRoleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/enums/Active.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/enums/Active.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/enums/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/enums/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/enums/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/enums/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/exceptions/GlobalExceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/exceptions/GlobalExceptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/AuthProviderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/AuthProviderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/OtpRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/OtpRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/UserEntityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/UserEntityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/impl/AuthenticationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/impl/AuthenticationImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tn/src/main/resources/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/resources/application-dev.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/UserRoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/repositorys/UserRoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/auth/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/security/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/admin/ManageUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/impl/AuthenticationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/auth/impl/AuthenticationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/impl/JwtServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/security/impl/JwtServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/admin/impl/ManageUserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Exception" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="dev" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -73,10 +68,14 @@
     &quot;accountId&quot;: &quot;58798488-312e-4d3e-bfa7-2ec1201853b9&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/impl/UserServiceImpl.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2su4hu1AEGtMZn09CmfEwjLHYIQ" />
+  <component name="ProjectId" id="2uOhd0qkAQ3mJATvfvWGm5xSODH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -89,33 +88,25 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.ProjectTnApplication.executor": "Run",
+    "Spring Boot.ProjectTnApplication.executor": "Debug",
+    "extract.method.default.visibility": "private",
     "git-widget-placeholder": "dev",
-    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/workspace/DACN/WEBSITE_HOC_TRUC_TUYEN_CODE_ZEN/Back-end",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="back-end-TN" />
+    <configuration name="ProjectTnApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="project-tn" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.back_end_TN.project_tn.ProjectTnApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="back-end-TN" />
-      <option name="filePath" />
-      <method v="2" />
     </configuration>
   </component>
   <component name="SharedIndexes">
@@ -129,33 +120,110 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c8fa37ad-bccc-4466-ae43-a781ef08409c" name="Changes" comment="" />
-      <created>1739292247728</created>
+      <changelist id="4ba48fe2-18a5-4d30-a7a3-5e2f332b6578" name="Changes" comment="" />
+      <created>1742125617237</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1739292247728</updated>
-      <workItem from="1739292248905" duration="60000" />
-      <workItem from="1739680897143" duration="146000" />
-      <workItem from="1739683185609" duration="9000" />
-      <workItem from="1739700679600" duration="485000" />
-      <workItem from="1739701181921" duration="28000" />
-      <workItem from="1739701261952" duration="56000" />
-      <workItem from="1739701343468" duration="26000" />
-      <workItem from="1741179856112" duration="690000" />
-      <workItem from="1741254104016" duration="2000" />
-      <workItem from="1741256847973" duration="2000" />
-      <workItem from="1741314243170" duration="3000" />
-      <workItem from="1741576887033" duration="4000" />
-      <workItem from="1741578943320" duration="5000" />
-      <workItem from="1741579676414" duration="49000" />
-      <workItem from="1741597298859" duration="3000" />
-      <workItem from="1741618997516" duration="31000" />
-      <workItem from="1742055796598" duration="8000" />
-      <workItem from="1742058532603" duration="48000" />
+      <updated>1742125617237</updated>
+      <workItem from="1742125619513" duration="5014000" />
+      <workItem from="1742187623737" duration="6000" />
+      <workItem from="1742265380932" duration="6000" />
+      <workItem from="1742266227444" duration="5000" />
+      <workItem from="1742316120076" duration="5000" />
+      <workItem from="1742397025861" duration="5000" />
+      <workItem from="1742455469142" duration="300000" />
+      <workItem from="1742609942727" duration="13000" />
+      <workItem from="1742993249460" duration="1320000" />
+      <workItem from="1743040553321" duration="4000" />
+      <workItem from="1743062941571" duration="6733000" />
+      <workItem from="1743085539178" duration="6966000" />
+      <workItem from="1743214327185" duration="1606000" />
+      <workItem from="1743241717409" duration="23285000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/user/impl/UserServiceImpl.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/user/impl/UserServiceImpl.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/user/impl/UserServiceImpl.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/user/impl/UserServiceImpl.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/user/impl/UserServiceImpl.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/user/impl/UserServiceImpl.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/user/impl/UserServiceImpl.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/user/impl/UserServiceImpl.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/user/impl/UserServiceImpl.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/user/impl/UserServiceImpl.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/common/impl/CommonServiceImpl.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/common/impl/CommonServiceImpl.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/common/impl/CommonServiceImpl.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project-tn/src/main/java/com/back_end_TN/project_tn/services/common/impl/CommonServiceImpl.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="Role.CLIENT" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

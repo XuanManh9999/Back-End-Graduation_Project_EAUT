@@ -12,7 +12,6 @@ import lombok.Setter;
 @Data
 @Table(name = "user_role")
 public class UserRoleEntity extends BaseEntity<Long>{
-
     @ManyToOne
     @JoinColumn(name = "user_id")
     private UserEntity userId;
@@ -20,6 +19,4 @@ public class UserRoleEntity extends BaseEntity<Long>{
     @ManyToOne
     @JoinColumn(name = "role_id")
     private RoleEntity roleId;
-
-
 }

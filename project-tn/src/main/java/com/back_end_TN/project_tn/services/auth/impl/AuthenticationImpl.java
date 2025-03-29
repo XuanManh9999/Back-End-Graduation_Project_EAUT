@@ -1,23 +1,20 @@
-package com.back_end_TN.project_tn.services.impl;
+package com.back_end_TN.project_tn.services.auth.impl;
 
 import com.back_end_TN.project_tn.components.EmailSending;
 import com.back_end_TN.project_tn.components.RandomStringGenerator;
 import com.back_end_TN.project_tn.dtos.request.*;
 import com.back_end_TN.project_tn.dtos.response.CommonResponse;
 import com.back_end_TN.project_tn.dtos.response.TokenResponse;
-import com.back_end_TN.project_tn.entitys.AuthProvider;
-import com.back_end_TN.project_tn.entitys.OtpEntity;
-import com.back_end_TN.project_tn.entitys.UserEntity;
+import com.back_end_TN.project_tn.entitys.*;
 import com.back_end_TN.project_tn.enums.Active;
+import com.back_end_TN.project_tn.enums.Role;
 import com.back_end_TN.project_tn.exceptions.customs.DuplicateResourceException;
 import com.back_end_TN.project_tn.exceptions.customs.InvalidDataNotFound;
 import com.back_end_TN.project_tn.exceptions.customs.NotFoundException;
-import com.back_end_TN.project_tn.repositorys.AuthProviderRepository;
-import com.back_end_TN.project_tn.repositorys.OtpRepository;
-import com.back_end_TN.project_tn.repositorys.UserEntityRepository;
-import com.back_end_TN.project_tn.services.AuthenticationService;
-import com.back_end_TN.project_tn.services.JwtService;
-import com.back_end_TN.project_tn.services.UserService;
+import com.back_end_TN.project_tn.repositorys.*;
+import com.back_end_TN.project_tn.services.auth.AuthenticationService;
+import com.back_end_TN.project_tn.services.security.JwtService;
+import com.back_end_TN.project_tn.services.admin.ManageUserService;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseToken;
@@ -25,7 +22,6 @@ import io.micrometer.common.util.StringUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.hibernate.boot.jaxb.cfg.spi.ObjectFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -44,7 +40,7 @@ import static com.back_end_TN.project_tn.enums.TokenType.REFRESH_TOKEN;
 @Slf4j
 public class AuthenticationImpl implements AuthenticationService {
     private final AuthenticationManager authenticationManager;
-    private final UserService userService;
+    private final ManageUserService manageUserService;
     private final JwtService jwtService;
     private final UserEntityRepository userEntityRepository;
     private final EmailSending emailSending;
@@ -53,12 +49,14 @@ public class AuthenticationImpl implements AuthenticationService {
     private final PasswordEncoder passwordEncoder;
     private final FirebaseAuth firebaseAuth;
     private final AuthProviderRepository authProviderRepository;
+    private final RoleRepository roleRepository;
+    private final UserRoleRepository userRoleRepository;
 
 
     @Override
     public TokenResponse authenticate(SignInRequest signInRequest) {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(signInRequest.getUsername(), signInRequest.getPassword()));
-        var user = userService.findUserByUsername(signInRequest.getUsername()).orElseThrow(() -> new UsernameNotFoundException("User or password is not found "));
+        var user = manageUserService.findUserByUsername(signInRequest.getUsername()).orElseThrow(() -> new UsernameNotFoundException("User or password is not found "));
         String accessToken = jwtService.generateAccessToken(user);
         String refreshToken = jwtService.generateTokenRefreshToken(user);
         return TokenResponse.builder()
@@ -82,7 +80,7 @@ public class AuthenticationImpl implements AuthenticationService {
 
 
         // check it into db
-        var user = userService.findUserByUsername(username).orElseThrow(() -> new InvalidDataNotFound("User not found"));
+        var user = manageUserService.findUserByUsername(username).orElseThrow(() -> new InvalidDataNotFound("User not found"));
         if (!jwtService.isValid(token, REFRESH_TOKEN, user)) {
             throw new InvalidDataNotFound("Refresh token is invalid");
         }
@@ -107,12 +105,23 @@ public class AuthenticationImpl implements AuthenticationService {
                 throw new DuplicateResourceException("Tài khoản đã tồn tại trên hệ thống với một phương thức đăng nhập khác. ");
             }
             UserEntity user = new UserEntity();
+
+
             user.setUsername(registerRequest.getUserName());
             user.setEmail(registerRequest.getEmail());
             String encodePassworrd = passwordEncoder.encode(registerRequest.getPassword());
             user.setPassword(encodePassworrd);
-            user.setActive(Active.CHUA_HOAT_DONG);
+
+            Optional<RoleEntity> roleEntity = roleRepository.findRoleEntityByName(Role.ROLE_USER);
+
+            UserRoleEntity userRole = new UserRoleEntity();
+
+            userRole.setUserId(user);
+            userRole.setRoleId(roleEntity.get());
             userEntityRepository.save(user);
+            userRole.setActive(Active.HOAT_DONG);
+            userRoleRepository.save(userRole);
+
             String encode = randomStringGenerator.generateRandomString(6);
             OtpEntity otp = new OtpEntity();
             otp.setEmail(registerRequest.getEmail());
